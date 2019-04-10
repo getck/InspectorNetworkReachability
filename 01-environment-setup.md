@@ -18,7 +18,7 @@ Before you deploy the CloudFormation template feel free to view it [here](./reso
 
 3.  Click “Create Stack”
 
-    1.  Select “Upload a Template File” and add the JSON file provided [here](./resources/EnvironmentBuild.json
+    1.  Select “Upload a Template File” and add the JSON file provided [here](./resources/EnvironmentBuild.json).
 
 4.  Click Next
 

@@ -57,7 +57,7 @@ Remember that ARN we copied down in Step 3 of Module 3? We will need that now. I
 
 15.	Click "Publish Message"
 
-** Note - Alternatively if you have the time, you can re-run the Inspector report and watch once it's complete to see if the change was made. **
+**Note - Alternatively if you have the time, you can re-run the Inspector report and watch once it's complete to see if the change was made.**
 
 Let's confirm it worked.
 

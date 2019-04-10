@@ -20,7 +20,7 @@ You start with building a sample architecture using common AWS products includin
 Workshop Scenario
 =================
 
-Company XYZ has been in AWS for a few months and is moving its first few workloads in the cloud. The first to move was an external website with a database back end. Security insisted that servers are only accessible for administrative access through a set of bastion hosts in a separate VPC. Recently, a developer has created a public proof of concept for a new highly available web service and connected it to the environment without going through all the proper change management. The various IT stakeholders have been working off some assumptions but have not had the chance to test them yet.
+Example Corp. has been in AWS for a few months and is moving its first few workloads in the cloud. The first to move was an external website with a database back end. Security insisted that servers are only accessible for administrative access through a set of bastion hosts in a separate VPC. Recently, a developer has created a public proof of concept for a new highly available web service and connected it to the environment without going through all the proper change management. The various IT stakeholders have been working off some assumptions but have not had the chance to test them yet.
 
 Assumption 1.\> Instances in private subnets are not accessible from the internet
 

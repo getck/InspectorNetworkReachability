@@ -17,7 +17,7 @@ The IT team found the developer’s new environment not because of controls, but
 
 Let’s look at their architecture on Slide 2.
 
-Company XYZ has isolated workloads by VPC and has used VPC peering to meet some connectivity assumptions. You can see they tried to build public and private subnets, but we have to dig deeper to see what’s actually going on there. Their production web app on the left has a load balancer in front of it, which is great. But you can see the PoC environment is not as mature.
+Example Corp. has isolated workloads by VPC and has used VPC peering to meet some connectivity assumptions. You can see they tried to build public and private subnets, but we have to dig deeper to see what’s actually going on there. Their production web app on the left has a load balancer in front of it, which is great. But you can see the PoC environment is not as mature.
 
 Before we dive too deep though, let’s go back and see what the built environment looks like.
 

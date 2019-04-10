@@ -10,7 +10,7 @@ Deploy the AWS CloudFormation template
 
 Running the CloudFormation script is easy. There are specific outputs at the end of the process to help you test and validate the instances are up and keep track of instances while looking at the Inspector Report.
 
-<aside class="notice">Before you deploy the CloudFormation template feel free to view it <a href="">here</a>.</aside>
+Before you deploy the CloudFormation template feel free to view it [here](./resources/EnvironmentBuild.json).
 
 1.  Make sure you are in a region that supports Amazon Inspector (<https://docs.aws.amazon.com/inspector/latest/userguide/inspector_supported_os_regions.html>)
 
@@ -18,7 +18,7 @@ Running the CloudFormation script is easy. There are specific outputs at the end
 
 3.  Click “Create Stack”
 
-    1.  Select “Upload a Template File” and add the JSON file provided
+    1.  Select “Upload a Template File” and add the JSON file provided [here](./resources/EnvironmentBuild.json
 
 4.  Click Next
 
@@ -37,7 +37,7 @@ Running the CloudFormation script is easy. There are specific outputs at the end
     5.  PassedKeyName: {Enter the EC2 Key Pair you generated in the Pre-Demo
         work}
 
-![](media/d0fdc8d1869173e0c98fb0dc1f04ae1c.png)
+![](./images/mod1-1-create-stack.png)
 
 6.  Click “Next”
 
@@ -48,7 +48,7 @@ Running the CloudFormation script is easy. There are specific outputs at the end
 
     1.  **People miss this step all the time**
 
-![](media/07ba63d845950c9270bec23364dc48f9.png)
+![](./images/mod1-2-acknowledge.png)
 
 9.  Click “Create Stack”
 

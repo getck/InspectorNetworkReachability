@@ -3,13 +3,13 @@ Module 2 - Running the Inspector Report
 
 1.  Refresh the CloudFormation interface until the Status shows “Create Complete”
 
-![](media/3721b4b5dd6d86dad7cc8d97c6e934c2.png)
+![](./images/mod2-1-create-complete.png)
 
 2.  Click on the Stack Name
 
 3.  Go to the Outputs tab of the Stack
 
-![](media/7a7bfd742ee72518cd7b04d80a71d7a1.png)
+![](./images/mod2-2-cloudformation-outputs.png)
 
 4.  Make note of the DNS names. You can use these to validate the Web servers that should be publically accessible are.
 
@@ -21,19 +21,19 @@ Module 2 - Running the Inspector Report
 
 6.  Go to the EC2 console to validate the instances are running.
 
-![](media/82974d0c3e52815cff89d4f649aa2e58.png)
+![](./images/mod2-3-ec2-validate.png)
 
 Now we create the Amazon Inspector Targets and Templates. We do this manually to get a feel for how it works, but this can be automated. First, we must create the Assessment Target to include all instances, even those without the agent.
 
 7.  Go to the Amazon Inspector service.
 
-![](media/fe68242c1a03432079f7ef8743199421.png)
+![](./images/mod2-4-inspector.png)
 
 **{Note: If you have not used Inspector in this region before, you will get a different set of screens. Start by clicking a.) “Getting Started” on the Amazon Inspector page, and then b.) “Advanced Setup” on the bottom right to get to the Assessment Target screen – Step 10}**
 
 8.  Click on Assessment Targets.
 
-![](media/da9499a9e157e759c9d047461c8ada84.png)
+![](./images/mod2-5-targets.png)
 
 9.  Click “Create”
 
@@ -51,7 +51,7 @@ Now we create the Amazon Inspector Targets and Templates. We do this manually to
 
     4.  Install Agents: Uncheck the box
 
-![](media/a4eac8c3c1dff0105b4d7c8cf4b1233b.png)
+![](./images/mod2-6-targets-2.png)
 
 11.	Click “Save”
 
@@ -73,14 +73,13 @@ Now we create the Amazon Inspector Targets and Templates. We do this manually to
 
     5.  Assessment Schedule: Uncheck the box
 	
-
-![](media/38571560c97e16554fb8b2425e35dcb2.png)
+![](./images/mod2-7-templates.png)
 
 15.	Click “Create” or “Create and run”
 
 16.	Click on Assessment Runs and then the refresh icon
 
-![](media/9ca39479fe50dcfed3522f5f45ef8c0a.png)
+![](./images/mod2-8-runs.png)
 
 17.	The status should say “Analyzing” or “Collecting data”
 
@@ -98,6 +97,6 @@ Now we want to publish the report to an SNS topic so we can take action. An SNS 
 
 23.	Click Save
 
-At this point the Inspector Assessment can take up to 15 minutes. So now’s a good time to go over the architecture. The [Presentation]() includes the architecture diagram, the route tables, and the security groups. The [Presentation Notes](presentation-notes.md) page then walks through the architecture with some probing questions.
+At this point the Inspector Assessment can take up to 15 minutes. So now’s a good time to go over the architecture. The [Presentation](./resources/demo-support-presentation.pdf) includes the architecture diagram, the route tables, and the security groups. The [Presentation Notes](presentation-notes.md) page then walks through the architecture with some probing questions.
 
 You can also choose to skip to [Evaluating Findings](03-evaluate-findings.md) once the report is complete.

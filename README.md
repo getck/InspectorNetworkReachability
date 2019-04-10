@@ -15,7 +15,7 @@ You start with building a sample architecture using common AWS products includin
 
 -	*[CAF Components](https://d0.awsstatic.com/whitepapers/AWS_CAF_Security_Perspective.pdf)*: Detective, Responsive
 
--	*[Prerequisites](https://awssecworkshops.com/getting-started/): AWS Account, Admin IAM User
+-	*[Prerequisites](https://awssecworkshops.com/getting-started/)*: AWS Account, Admin IAM User
 
 Workshop Scenario
 =================
@@ -72,15 +72,15 @@ Instance Purpose
 -   VPC 2 – 2 Proof of Concept Servers
 -   VPC 3 – 2 Bastion Hosts (SSH and RDP)
 
-![C:\\Users\\mikewas\\AppData\\Local\\Packages\\Microsoft.MicrosoftEdge_8wekyb3d8bbwe\\TempState\\Downloads\\InspectorNetworkDemo (3) (2).png](media/f66a33b9f7bdef8e7d9e1dc49e9cb140.png)
+![](./images/readme-1-architecture.png)
 
 Here are the Route Tables and Security Groups as well.
 
-![](media/b6ca209348055b733b46fa86e5ab29c2.png)
+![](./images/readme-2-routes.png)
 
-![](media/ca911b8834143cb4183b9263246d36d5.png)
+![](./images/readme-3-security-groups.png)
 
-![](media/2d5f291fb8c3c43edbd0f78e47ea55bd.png)
+![](./images/readme-3-security-groups-2.png)
 
 Presentation Deck
 =================

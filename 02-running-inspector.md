@@ -60,6 +60,8 @@ Now we create the Amazon Inspector Targets and Templates. We do this manually to
 12.	Click on Assessment Templates
 
 13.	Click on “Create”
+	
+![](./images/mod2-7-templates.png)
 
 14.	Fill out the screen as follows:
 
@@ -72,8 +74,6 @@ Now we create the Amazon Inspector Targets and Templates. We do this manually to
     4.  Duration: “15 minutes”
 
     5.  Assessment Schedule: Uncheck the box
-	
-![](./images/mod2-7-templates.png)
 
 15.	Click “Create” or “Create and run”
 

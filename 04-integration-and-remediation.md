@@ -1,7 +1,7 @@
 Module 4 - Integration and Remediation
 ======================================
 
-Remember how we had our assessment send the findings to an SNS topic? We are going to use that to trigger a Lambda function to remediate common findings. We've written a Lambda function to block SSH access to misconfigured instances and included it in the CloudFormation template. Let's build the connection from SNS to Lamabda and review the code.
+Remember how we had our assessment send the findings to an SNS topic? We are going to use that to trigger a Lambda function to remediate common findings. We've written a Lambda function to block SSH access to misconfigured instances and included it in the CloudFormation template. Let's build the connection from SNS to Lambda and review the code.
 
 1.	Click on Services on the top right and type in Simple Notification Service. Then click the service.
 
@@ -13,7 +13,7 @@ In order to have the SNS topic send data to Lambda, we need to create a subscrip
 
 4.	Click Create Subscription
 
-5.	The Topic Arn should be filled out, but if its not click on it and select the topic.
+5.	The Topic Arn should be filled out, but if it's not click on it and select the topic.
 
 6.	Click on the Protocol drop down and select AWS Lambda
 
@@ -21,7 +21,7 @@ In order to have the SNS topic send data to Lambda, we need to create a subscrip
 
 8.	Click Create Subscription
 
-We've now configured SNS to send any alerts it receives to our Lambda function. Our Lambda function is configured to only respond to specific findings in specific ways. If you're interested in reviewing the Lambda function you can go to the Lambda console. If you're not interested. Here's the relevant piece of code for this activity.
+We've now configured SNS to send any alerts it receives to our Lambda function. Our Lambda function is configured to only respond to specific findings in specific ways. If you're interested in reviewing the Lambda function you can go to the Lambda console. If you're not interested in digging into it, here's just the relevant piece of code for this activity.
 
 
 
@@ -61,7 +61,7 @@ Let's confirm it worked.
 
 Do we see a rule blocking SSH?
 
-But if SSH is completely blocked to the instance, how can legitmate administrators configure the machine? Well, they can modify the Security Group and then the NACL through their Change Process. But if they want to make sure the instance wasn't compromised there's another option.
+But if SSH is completely blocked to the instance, how can legitimate administrators configure the machine? Well, they can modify the Security Group and then the NACL through their Change Process. But if they want to make sure the instance wasn't compromised there's another option.
 
 20.	Click on Services on the top right and click on Systems Manager
 

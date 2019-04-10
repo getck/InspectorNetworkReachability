@@ -1,7 +1,7 @@
 Module 5 - Cleanup
 ==================
 
-The following steps will help you clean up your  environment. This is important because we did not remediate some publically accessible instances that could be abused.
+The following steps will help you clean up your environment. This is important because we did not remediate some publically accessible instances that could be abused.
 
 1.  Delete Assessment Runs - In the Inspector Service, click on Assessment runs, click the box next to all runs, and hit the Delete button.
 

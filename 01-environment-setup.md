@@ -28,14 +28,11 @@ Before you deploy the CloudFormation template feel free to view it [here](./reso
 
     2.  Availability Zone 1: Pick any availability zone
 
-    3.  Availability Zone 2: Pick any availability zone except the first one you
-        picked
+    3.  Availability Zone 2: Pick any availability zone except the first one youpicked
 
-    4.  LatestLinuxAmiID: Leave as default. This is here to get the latest
-        Amazon Linux 2 AMI. The demo has only been tested on this.
+    4.  LatestLinuxAmiID: Leave as default. This is here to get the latestAmazon Linux 2 AMI. The demo has only been tested on this.
 
-    5.  PassedKeyName: {Enter the EC2 Key Pair you generated in the Pre-Demo
-        work}
+    5.  PassedKeyName: {Enter the EC2 Key Pair you generated in the Pre-Demo work}
 
 ![](./images/mod1-1-create-stack.png)
 
@@ -43,8 +40,7 @@ Before you deploy the CloudFormation template feel free to view it [here](./reso
 
 7.  Click “Next” on the following screen.
 
-8.  **Acknowledge the CloudFormation Template creates a user by checking the
-    box.**
+8.  **Acknowledge the CloudFormation Template creates a user by checking the box.**
 
     1.  **People miss this step all the time**
 

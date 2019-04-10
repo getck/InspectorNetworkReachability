@@ -1,7 +1,7 @@
 Module 3 - Evaluating Findings
 ==============================
 
-Let's look at the Inspector Network Reachbility report findings and see what we can learn.
+Let's look at the Inspector Network Reachability report findings and see what we can learn.
 
 1.  Go back to the Assessment Runs. It should be done
 
@@ -27,7 +27,7 @@ So since we know some things are wrong, let’s check the other findings for thi
 
 ![](./images/mod3-4-instance-search.png)
 
-When you hover over the Finding titles we Immediately see multiple findings about Peered connections, one Low and the top three Informational findings. Since we already looked at the SSH finding and know we need to address that, let’s look at the Informational.
+When you hover over the Finding titles we immediately see multiple findings about Peered connections, one Low and the top three Informational findings. Since we already looked at the SSH finding and know we need to address that, let’s look at the Informational.
 
 5.  Expand the “Finding” Column so you can see enough of the title to see “Peered”
 
@@ -39,7 +39,7 @@ When you hover over the Finding titles we Immediately see multiple findings abou
 
 8.	Click on the VPC peer name from the finding.
 
-9.	Click on the Requester VPC in thew bottom window.
+9.	Click on the Requester VPC in the bottom window.
 
 We see the peer is to the Bastion VPC. This is okay because we want this behavior. What we don’t see, however, is anything about connectivity from the WebApp VPC. That’s because the report knows there’s no way to transit through multiple VPC Peering connections today. So this helps us validate Assumption 3 is true as long as there’s no additional routing the report can’t see (for example a Cisco CSR Transit VPC).
 

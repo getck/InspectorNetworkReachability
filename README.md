@@ -3,7 +3,7 @@
 Overview
 ========
 
-The workshop will demonstrate how you can validate their network configuration without needing to have a deep networking background by using Inspector's Network Reachability report. You will learn how this report can help them find misconfigurations in the architecture or behaviors they might not have expected. The demo will finish with using the Network Reachability report findings integrated with other Security Services to remediate these issues.
+The workshop will demonstrate how you can validate their network configuration without needing to have a deep networking background by using Inspector's Network Reachability report. You will learn how this report can help them find misconfigurations in the architecture or behaviors they might not have expected. The workshop will finish with using the Network Reachability report findings integrated with other Security Services to remediate these issues.
 
 You start with building a sample architecture using common AWS products including Application Load Balancers, EC2, Security Groups, NACLs, Internet Gateways, NAT Gateways, and VPC Peering. The environment will include known ports, unrecognized ports, and Network Exposures. Network exposures will be on agentless systems. You will then run Inspector reports to gather information on the environment and analyze the results for misconfigurations or severe issues. Finally, integration with Security Hub and automated remediation will be configured to deal with common issues.
 

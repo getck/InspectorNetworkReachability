@@ -1,7 +1,7 @@
 Optional: Presentation Notes
 ============================
 
-While the environment is building let’s talk about what this represents. Remember, this scenario is comprised of a new company that has  been in AWS for a few months and are moving their first few workloads in the cloud. The CloudFormation template is modeling their environment. The first workload to move was an external website with a database back end. Security insisted that access to those servers only be through a set of bastion hosts in a separate VPC. Recently, a developer has created a public proof of concept for a new highly available web service and connected it to the environment without going through all the proper change management. The developer did the right thing by putting two different servers in two different availability zones. But since the two AZs have different Security Groups, each with different port filtering setup, the workload may not be able to successfully failover correctly. The various IT stakeholders have been working off some assumptions but have not had the chance to test them yet.
+While the environment is building let’s talk about what this represents. Remember, this scenario is comprised of a new company that has been in AWS for a few months and are moving their first few workloads in the cloud. The CloudFormation template is modeling their environment. The first workload to move was an external website with a database back end. Security insisted that access to those servers only be through a set of bastion hosts in a separate VPC. Recently, a developer has created a public proof of concept for a new highly available web service and connected it to the environment without going through all the proper change management. The developer did the right thing by putting two different servers in two different availability zones. But since the two AZs have different Security Groups, each with different port filtering setup, the workload may not be able to successfully failover correctly. The various IT stakeholders have been working off some assumptions but have not had the chance to test them yet.
 
 Assumption 1.\> Instances in private subnets are not accessible from the internet
 
@@ -13,11 +13,11 @@ Assumption 4.\> Access to the servers is limited by least privilege
 
 Assumption 5.\> The bastion hosts can access all environments
 
-The IT team found the developer’s new environment not because of controls, but because the bill came back above budget. Now the security and operations team want to validate the right security is applied to the new environment  as well as the existing one. They will use the Network Reachability report in Amazon Inspector to provide them validation of their network assumptions. This is a recent addition to Inspector, going public in November of 2018. 
+The IT team found the developer’s new environment not because of controls, but because the bill came back above budget. Now the security and operations team want to validate the right security is applied to the new environment as well as the existing one. They will use the Network Reachability report in Amazon Inspector to provide them validation of their network assumptions. This is a recent addition to Inspector, going public in November of 2018. 
 
 Let’s look at their architecture on Slide 2.
 
-Company XYZ has isolated workloads by VPC and have used VPC peering to meet some connectivity assumptions. You can see they tried to build public and private subnets, but we have to dig deeper to see what’s actually going on there. Their production web app on the left has a load balancer in front of it, which is great. But you can see the PoC environment is not as mature.
+Company XYZ has isolated workloads by VPC and has used VPC peering to meet some connectivity assumptions. You can see they tried to build public and private subnets, but we have to dig deeper to see what’s actually going on there. Their production web app on the left has a load balancer in front of it, which is great. But you can see the PoC environment is not as mature.
 
 Before we dive too deep though, let’s go back and see what the built environment looks like.
 

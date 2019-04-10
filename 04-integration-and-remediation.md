@@ -7,11 +7,15 @@ Remember how we had our assessment send the findings to an SNS topic? We are goi
 
 2.	Click on Topics on the left hand side
 
+![](./images/mod4-1-sns-topics.png]
+
 3.	Click on the Topic named "InspectorAutomation"
 
 In order to have the SNS topic send data to Lambda, we need to create a subscription. We should see the subscriptions window on the bottom and it should be empty.
 
 4.	Click Create Subscription
+
+![](./images/mod4-2-subscription.png]
 
 5.	The Topic Arn should be filled out, but if it's not click on it and select the topic.
 
@@ -19,11 +23,13 @@ In order to have the SNS topic send data to Lambda, we need to create a subscrip
 
 7.	You should now see another dropdown. Click on it and select the one Lambda function that's there.
 
+![](./images/mod4-3-create-subscription.png]
+
 8.	Click Create Subscription
 
 We've now configured SNS to send any alerts it receives to our Lambda function. Our Lambda function is configured to only respond to specific findings in specific ways. If you're interested in reviewing the Lambda function you can go to the Lambda console. If you're not interested in digging into it, here's just the relevant piece of code for this activity.
 
-
+![](./images/mod4-13-lambda-code.png]
 
 You can see here that the Lambda code adds a Network ACL line that blocks SSH from the internet to any instance that has SSH open to the internet.
 
@@ -35,6 +41,8 @@ To trigger this we need to have Inspector submit a finding to SNS. Rather than w
 
 11.	In the top right click on the button that says "Publish Message"
 
+![](./images/mod4-4-publish.png]
+
 Remember that ARN we copied down in Step 3 of Module 3? We will need that now. If you don't have it, you can go back to Inspector and copy the ARN from the Medium finding. We are going to publish a fake SNS message using the appropriate ARN to kick off the Lambda function.
 
 12.	Paste the ARN into the appropriate place on the following text:
@@ -44,6 +52,8 @@ Remember that ARN we copied down in Step 3 of Module 3? We will need that now. I
 13.	Paste the SNS message from above in the "Message body to send to the endpoint" text box
 
 14.	Leave all the other fields empty
+
+![](./images/mod4-5-message.png]
 
 15.	Click "Publish Message"
 
@@ -55,9 +65,15 @@ Let's confirm it worked.
 
 17.	On the left hand navigation click on Network ACLs
 
+![](./images/mod4-6-vpc-nacls.png]
+
 18.	Since we know the Proof of Concept VPC is the one with the misconfiguration, click on the ACL associated with that VPC
 
+![](./images/mod4-7-nacls.png]
+
 19.	On the bottom navigation, click on "Inbound Rules"
+
+![](./images/mod4-8-nacl-rules.png]
 
 Do we see a rule blocking SSH?
 
@@ -67,7 +83,11 @@ But if SSH is completely blocked to the instance, how can legitimate administrat
 
 21.	On the left hand navigation, click on Session Manager
 
+![](./images/mod4-9-systems-manager.png]
+
 22.	On the right hand side click on Start Session
+
+![](./images/mod4-10-session-manager.png]
 
 Do you remember the instance ID with the misconfigured Security Group? If not, don't worry, it was the PoC Web Server for AZ2
 
@@ -75,9 +95,13 @@ Do you remember the instance ID with the misconfigured Security Group? If not, d
 
 24.	Click Start Session
 
+![](./images/mod4-11-session-instances.png]
+
 25.	Type "ping 8.8.8.8" - Are you able to ping out to the world? Hit Cntl-C when you're ready to move on.
 
 26. Type "whoami" - What user are you logged into the box as?
+
+![](./images/mod4-12-active-session.png]
 
 This looks just like an SSH session! Instead though, this is a proxy created by the AWS System Manager Agent installed on the AMI. With the Session Manager feature you can create an SSH-like access to devices that don't have port 22 open at all. All that's necessary is to allow traffic to the Systems Manager Endpoint over port 443 and return traffic.
 

@@ -47,9 +47,9 @@ Remember that ARN we copied down in Step 3 of Module 3? We will need that now. I
 
 12.	Paste the ARN into the appropriate place on the following text:
 
-'''
+```
 {"template":"arn:aws:inspector:us-east-1:123456789012:target/0-a12b3c4d/template/0-5e6f7g8h","run":"arn:aws:inspector:us-east-1:123456789012:target/0-a12b3c4d/template/0-5e6f7g8h/run/0-9i0j1k2l","time":"2019-04-09T00:00:01.401Z","finding":"**INSERT ARN HERE**","event":"FINDING_REPORTED","target":"arn:aws:inspector:us-east-1:123456789012:target/0-a12b3c4d"}
-'''
+```
 
 13.	Paste the SNS message from above in the "Message body to send to the endpoint" text box
 
